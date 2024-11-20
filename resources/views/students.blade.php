@@ -8,6 +8,7 @@
             <td>email</td>
             <td>batch</td>
             <td>delete</td>
+            <td>Edit</td>
             </tr>
             @foreach ($data as $datas)
             <tr>
@@ -16,6 +17,7 @@
             <td>{{$datas->email}}</td>
             <td>{{$datas->batch}}</td>
             <td><a href="{{url('delete',$datas->id)}}">Delete</a></td>
+            <td><a href="{{url('edit',$datas->id)}}">Edit</a></td>
             </tr>
             @endforeach
         </table>

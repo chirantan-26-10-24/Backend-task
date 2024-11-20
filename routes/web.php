@@ -14,3 +14,6 @@ Route::get('/students',[StudentController::class,'getStudents']);
 Route::get('/delete/{id}',[StudentController::class,'delete']);
 Route::view('addStudent','addStudent');
 Route::post('upload',[StudentController::class,'upload']);
+
+Route::get('/edit/{id}',[StudentController::class,'edit']);
+Route::put('/updateData/{id}',[StudentController::class,'updatedata']);

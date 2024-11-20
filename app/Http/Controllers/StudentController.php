@@ -26,4 +26,17 @@ class StudentController extends Controller
         $student->save();
         return redirect(url('students'));
     }
+    public function edit($id){
+        $student = Student::find($id);
+        return view('edit',compact('student'));
+    }
+    public function updateData(Request $request,$id){
+        $student = Student::find($id);
+        $student->name=$request->name;
+        $student->email=$request->email;
+        $student->batch=$request->batch;
+        $student->update();
+        return redirect(url('students'));
+    }
+
 }
